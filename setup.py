@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'UI_node = assignment2_ros2.UI_node:main'
+            'robot_controller_node = assignment2_ros2.robot_controller_node:main'
         ],
     },
 )

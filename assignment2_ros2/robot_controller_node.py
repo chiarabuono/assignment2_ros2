@@ -23,13 +23,12 @@ class RobotController(Node):
     def move_robot(self):
         velocityChosen = Twist()
         x_pos = self.odom.pose.pose.position.x 
-        # y_pos = self.odom.pose.pose.position.y
-
-        angular_z = 0.0
+       
         linear_x = 1.0
         
         if x_pos > 9.0: angular_z = 1.0
         elif x_pos < 2.0: angular_z = -1.0
+        else: angular_z = 0.0
 
         velocityChosen.linear.x = linear_x
         velocityChosen.angular.z = angular_z      
